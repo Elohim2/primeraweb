@@ -1,0 +1,76 @@
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav {
+    text-align: center;
+    background-color: #444;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    min-height: 100vh; /* Cambia 'height' a 'min-height' para evitar desbordamientos */
+}
+
+aside {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    padding: 10px;
+}
+
+section {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px;
+    border: 2px solid #08084c;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #656574;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #dad5d5;
+}

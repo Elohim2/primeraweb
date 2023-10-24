@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #444;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        main {
+            display: flex;
+            height: 100vh; /* Establece la altura al 100% de la ventana */
+        }
+
+        aside {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: #3f3f3f;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Web</h1>
+    </header>
+
+    <nav>
+        <a onclick="mostrar('inicio')">Inicio</a>
+        <a onclick="mostrar('tablas')">Tablas</a>
+        <a onclick="mostrar('video')">Video</a>
+        <a onclick="mostrar('formulario')">Formulario</a>
+    </nav>
+
+    <main>
+        <aside>
+            <h2>Menú lateral</h2>
+            <ul>
+                <li><a onclick="mostrar('inicio')">Inicio</a></li>
+                <li><a onclick="mostrar('tablas')">Tablas</a></li>
+                <li><a onclick="mostrar('video')">Video</a></li>
+                <li><a onclick="mostrar('formulario')">Formulario</a></li>
+            </ul>
+        </aside>
+
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <img src="https://m.portafolio.co/files/article_content/uploads/2019/01/22/5c47933c45d6a.jpeg"
+            <p></p>
+        </section>
+
+        <section id="tablas" style="display: none;>
+            <h2>Tablas</h2>
+            <table style="border-collapse: collapse; width: 100%;">
+             <table>
+        <tr>
+            
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Teléfono</th>
+            <th>Correo</th>
+        </tr>
+        <tr>
+            <td>Juan Pérez</td>
+            <td>30</td>
+            <td>555-123-4567</td>
+            <td>juanperez@example.com</td>
+        </tr>
+        <tr>
+            <td>María González</td>
+            <td>25</td>
+            <td>555-987-6543</td>
+            <td>mariagonzalez@example.com</td>
+        </tr>
+        <tr>
+            <td>Carlos Rodríguez</td>
+            <td>35</td>
+            <td>555-567-8901</td>
+            <td>carlosrodriguez@example.com</td>
+        </tr>
+        <tr>
+            <td>Sofía López</td>
+            <td>28</td>
+            <td>555-333-4444</td>
+            <td>sofialopez@example.com</td>
+        </tr>
+        <tr>
+            <td>Luis Martínez</td>
+            <td>42</td>
+            <td>555-555-5555</td>
+            <td>luismartinez@example.com</td>
+        </tr>
+        <tr>
+            <td>Ana Sánchez</td>
+            <td>29</td>
+            <td>555-777-8888</td>
+            <td>anasanchez@example.com</td>
+        </tr>
+        <tr>
+            <td>Pablo Ramirez</td>
+            <td>37</td>
+            <td>555-666-9999</td>
+            <td>pabloramirez@example.com</td>
+        </tr>
+        <tr>
+            <td>Laura Torres</td>
+            <td>31</td>
+            <td>555-222-3333</td>
+            <td>lauratorres@example.com</td>
+        </tr>
+        <tr>
+            <td>Miguel Castro</td>
+            <td>33</td>
+            <td>555-444-7777</td>
+            <td>miguelcastro@example.com</td>
+        </tr>
+        <tr>
+            <td>Elena Vargas</td>
+            <td>27</td>
+            <td>555-888-9999</td>
+            <td>elenavargas@example.com</td>
+        </tr>
+    </table>
+</section>
+            <p></p>
+            
+        </section>
+
+        <section id="video" style="display: none;">
+            <h2>Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/vNc3a0yQAqM?si=NpJ2ENq2HJRm6HBV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p>Contenido de la sección de Video.</p>
+        </section>
+
+        <section id="formulario" style="display: none;">
+            <h2>Formulario</h2>
+            <form onsubmit="return validarFormulario()">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <br>
+                <label for "edad">Edad:</label>
+                <input type="number" id="edad" name="edad">
+                <br>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                <br>
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo">
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023</p>
+    </footer>
+
+    <script>
+        function mostrar(seccion) {
+            // Ocultar todas las secciones
+            document.getElementById('inicio').style.display = 'none';
+            document.getElementById('tablas').style.display = 'none';
+            document.getElementById('video').style.display = 'none';
+            document.getElementById('formulario').style.display = 'none';
+
+            // Mostrar la sección seleccionada
+            document.getElementById(seccion).style.display = 'block';
+        }
+
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var edad = document.getElementById("edad").value;
+            var telefono = document.getElementById("telefono").value;
+            var correo = document.getElementById("correo").value;
+
+            if (nombre === "" || edad === "" || telefono === "" || correo === "") {
+                alert("Por favor, complete todos los campos.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
